@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="1" author="anush">
+	
+	<createTable tableName="CLIENT"  >
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="CLIENT_NAME" type="VARCHAR(100)" />
+			<column name="PAN" type="VARCHAR(100)" />
+			<column name="WEBSITE" type="VARCHAR(100)" />
+			<column name="IS_INTERNAL" type="TINYINT" defaultValue="0"/>
+		</createTable>
+		
+		
+		<createTable tableName="USER">
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="FIRST_NAME" type="VARCHAR(100)" />
+			<column name="LAST_NAME" type="VARCHAR(50)" />
+			<column name="EMAIL_ID" type="VARCHAR(100)" />
+			<column name="MOBILE_NUMBER" type="VARCHAR(50)" />
+			<column name="PASSWORD" type="VARCHAR(500)" />
+			<column name="CLIENT_ID" type="INT(11)" >
+				<!-- <constraints foreignKeyName="FK_USER_CLIENT_ID" referencedTableName="CLIENT" referencedColumnNames="ID"/> -->
+			</column>
+		</createTable>
+		
+		<createTable tableName="ROLE_MASTER">
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+			<column name="ROLE_NAME" type="VARCHAR(100)" />
+		</createTable>
+		
+		<createTable tableName="ROLE_ACLS">
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+			<column name="ROLE_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_ROLE_ACL_ID" referencedTableName="ROLE_MASTER" referencedColumnNames="ID"/>
+			</column>
+			<column name="ACL_NAME" type="VARCHAR(100)" />
+		</createTable>
+		
+		<createTable tableName="ROLES">
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="ROLE_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_ROLE_ID" referencedTableName="ROLE_MASTER" referencedColumnNames="ID"/>
+			</column>
+			<column name="USER_ID" type="INT(11)" >
+				<!-- <constraints foreignKeyName="FK_USER_ID" referencedTableName="USER" referencedColumnNames="ID"/> -->
+			</column>
+		</createTable>
+		
+	
+		
+		
+		
+		<!-- <createTable tableName="CLIENT_USER"  >
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="CLIENT_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_CLIENT_ID" referencedTableName="CLIENT" referencedColumnNames="ID"/>
+			</column>
+			<column name="USER_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_CLIENT_USER_ID" referencedTableName="USER" referencedColumnNames="ID"/>
+			</column>
+		</createTable> -->
+		
+		<createTable tableName="PROJECT" >
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="CLIENT_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_PROJECT_CLIENT_ID" referencedTableName="CLIENT" referencedColumnNames="ID"/>
+			</column>
+			<column name="NAME" type="VARCHAR(100)" />
+			<column name="DESCRIPTION" type="TEXT" />
+			<column name="CURRENT_STATE" type="VARCHAR(100)" />
+			<column name="ESTIMATED_PROJECT_START" type="DATETIME" />
+			<column name="ESTIMATED_PROJECT_END" type="DATETIME" />
+		</createTable>
+		
+		<createTable tableName="TASKS" >
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="PROJECT_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_PROJECT_ID" referencedTableName="PROJECT" referencedColumnNames="ID"/>
+			</column>
+			<column name="TASK_NAME" type="VARCHAR(100)" />
+			<column name="TASK_DESCRIPTION" type="TEXT" />
+			<column name="TASK_DURATION_HRS" type="INT" />
+			<column name="TASK_START" type="DATETIME" />
+			<column name="TASK_END" type="DATETIME" />
+			<column name="TASK_STATUS" type="VARCHAR(100)" />
+			<column name="IS_TASK_DELETE" type="TINYINT" />
+		</createTable>
+		
+		<createTable tableName="TASK_DEPENDENCY" >
+			<column name="ID" type="INT(11)" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="CREATED_TS" type="DATETIME"
+				defaultValueDate="CURRENT_TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+			<column name="CREATED_BY" type="VARCHAR(45)" />
+			<column name="UPDATED_TS" type="DATETIME" />
+			<column name="UPDATED_BY" type="VARCHAR(45)" />
+			<column name="TASK_CURRENT_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_TASK_CURRENT_ID" referencedTableName="TASKS" referencedColumnNames="ID"/>
+			</column>
+			<column name="TASK_DEPENDENT_ID" type="INT(11)" >
+				<constraints foreignKeyName="FK_TASK_DEPENDENT_ID" referencedTableName="TASKS" referencedColumnNames="ID"/>
+			</column>
+			<column name="TASK_PROIRITY" type="INT(11)" />
+		</createTable>
+	 </changeSet>
+</databaseChangeLog>
