@@ -11,19 +11,24 @@
         <result property="pan" column="PAN"/>
         <result property="website" column="WEBSITE"/>
          <result property="roleName" column="ROLE_NAME"/>
-        <collection property="acls"  javaType="list">
+        <collection property="acls" ofType="java.lang.String"  javaType="list">
 			<result column="ACL_NAME" javaType="java.lang.String" />
 		</collection>
     </resultMap>
     
     <select id="getUsers" resultMap="userMap"  >
-       SELECT ID,FIRST_NAME,LAST_NAME,EMAIL_ID,MOBILE_NUMBER 
+        SELECT u.ID,FIRST_NAME,LAST_NAME,EMAIL_ID,MOBILE_NUMBER , rm.ROLE_NAME , ra.ACL_NAME as ACL_NAME ,
+       c.CLIENT_NAME,c.PAN,c.WEBSITE 
        FROM USER u 
+       LEFT JOIN CLIENT c ON c.ID = u.CLIENT_ID 
+       LEFT JOIN ROLES r ON r.USER_ID =u.ID 
+       LEFT JOIN ROLE_MASTER rm ON rm.ID=r.ROLE_ID 
+       LEFT JOIN ROLE_ACLS ra ON ra.ROLE_ID = rm.ID 
         where u.CLIENT_ID=#{clientId}
     </select>
     
    <select id="getUserById" resultMap="userMap"  >
-       SELECT ID,FIRST_NAME,LAST_NAME,EMAIL_ID,MOBILE_NUMBER , rm.ROLE_NAME , ra.ACL_NAME as ACL_NAME ,
+       SELECT u.ID,FIRST_NAME,LAST_NAME,EMAIL_ID,MOBILE_NUMBER , rm.ROLE_NAME , ra.ACL_NAME as ACL_NAME ,
        c.CLIENT_NAME,c.PAN,c.WEBSITE 
        FROM USER u 
        LEFT JOIN CLIENT c ON c.ID = u.CLIENT_ID 

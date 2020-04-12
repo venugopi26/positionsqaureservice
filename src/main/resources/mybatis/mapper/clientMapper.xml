@@ -19,16 +19,26 @@
 	</resultMap>
 
 	<resultMap id="taskMap" type="map">
-		<result property="id" column="ID" />
+		<result property="id" column="TASK_ID" />
 		<result property="name" column="TASK_NAME" />
 		<result property="description" column="TASK_DESCRIPTION" />
 		<result property="duration" column="TASK_DURATION_HRS" />
-		<result property="startDate" column="TASK_START" />
-		<result property="endDate" column="TASK_END" />
+		<result property="start" column="TASK_START" />
+		<result property="end" column="TASK_END" />
 		<result property="status" column="TASK_STATUS" />
 		<result property="createdTime" column="CREATED_TS" />
 		<result property="progress" column="PROGRESS" />
+		 <collection property="dependencies"  ofType="java.lang.Integer"  javaType="list">
+			<result column="DEPENDENT_ID" javaType="java.lang.Integer" />
+		</collection>
 	</resultMap>
+	
+	<select id="getTasksDependency" resultType="int">
+		SELECT TASK_DEPENDENT_ID from TASK_DEPENDENCY t
+		<where>
+			t.TASK_CURRENT_ID=#{ID} 
+		</where>
+	</select>
 
 	<select id="getClients" resultMap="clientMap">
 		SELECT * FROM CLIENT;
@@ -45,10 +55,14 @@
 	</select>
 
 	<select id="getTasks" resultMap="taskMap">
-		SELECT ID,TASK_DESCRIPTION,TASK_NAME,TASK_DURATION_HRS,TASK_START,TASK_END,TASK_STATUS,CREATED_TS,PROGRESS   FROM TASKS t 
+		SELECT t.ID as TASK_ID,TASK_DESCRIPTION,TASK_NAME,TASK_DURATION_HRS,TASK_START,TASK_END,TASK_STATUS,t.CREATED_TS,PROGRESS,
+		td.TASK_DEPENDENT_ID as DEPENDENT_ID  
+		FROM TASKS t 
+		LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID 
 		<where>
-			t.PROJECT_ID=#{projectId} ;
+			t.PROJECT_ID=#{projectId} 
 		</where>
+		ORDER BY CREATED_TS;
 	</select>
 
 </mapper>

@@ -82,23 +82,32 @@ public class ClientService {
 
 	@Transactional
 	public ResponseEntity<Tasks> updateTask(@Valid Tasks task, @Valid int taskId, int clientId, @Valid int projectId) {
-		Tasks oldTask = tasksRepository.getOne(taskId);
-		long startNo = task.getTaskEnd().getTime() - oldTask.getTaskEnd().getTime();
-
-		Set<TaskDependency> tasks = tasksDependencyRepository.getDependentTaskTaskByProject(taskId);
-		System.out.println("tasks:" + tasks.size());
-		tasks.forEach((taskDepend) -> {
+		ResponseEntity<Tasks> response= new ResponseEntity<Tasks>();
+		try {
+			Tasks oldTask = tasksRepository.getOne(taskId);
+			long startNo = task.getTaskStart().getTime() - oldTask.getTaskStart().getTime();
+			long endNo = task.getTaskEnd().getTime() - oldTask.getTaskStart().getTime();
+			// intial update for tasks 
 			task.setProjectId(projectId);
 			tasksRepository.save(task);
-			Tasks dependentTask = tasksRepository.getOne(taskDepend.getTaskDependentid());
-			long endNo = dependentTask.getTaskEnd().getTime() - dependentTask.getTaskStart().getTime();
-			dependentTask.setTaskStart(new Date(task.getTaskEnd().getTime() + startNo));
-			dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + startNo));
-			tasksRepository.save(dependentTask);
-		});
+			
+			Set<TaskDependency> tasks = tasksDependencyRepository.getDependentTaskTaskByProject(taskId);
+			tasks.forEach((taskDepend) -> {
+				Tasks dependentTask = tasksRepository.getOne(taskDepend.getTaskDependentid());
+				dependentTask.setTaskStart(new Date(dependentTask.getTaskStart().getTime() + startNo));
+				dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + endNo));
+				tasksRepository.save(dependentTask);
+			});
 
-		ResponseEntity<Tasks> response = new ResponseEntity<>();
-		response.setStatusCode(200);
+			response = new ResponseEntity<>();
+			response.setStatusCode(200);
+			response.setResponse(task);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			response.setStatusCode(500);
+			response.setErrorResponse("Error in updating tasks");
+		}
 		return response;
 	}
 
