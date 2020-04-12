@@ -22,11 +22,12 @@
 		<result property="id" column="ID" />
 		<result property="name" column="TASK_NAME" />
 		<result property="description" column="TASK_DESCRIPTION" />
-		<result property="state" column="TASK_DURATION_HRS" />
-		<result property="state" column="TASK_START" />
-		<result property="state" column="TASK_END" />
-		<result property="state" column="TASK_STATUS" />
+		<result property="duration" column="TASK_DURATION_HRS" />
+		<result property="startDate" column="TASK_START" />
+		<result property="endDate" column="TASK_END" />
+		<result property="status" column="TASK_STATUS" />
 		<result property="createdTime" column="CREATED_TS" />
+		<result property="progress" column="PROGRESS" />
 	</resultMap>
 
 	<select id="getClients" resultMap="clientMap">
@@ -44,7 +45,7 @@
 	</select>
 
 	<select id="getTasks" resultMap="taskMap">
-		SELECT ID,TASK_DESCRIPTION,TASK_NAME,TASK_DURATION_HRS,TASK_START,TASK_END,TASK_STATUS,CREATED_TS   FROM TASKS t 
+		SELECT ID,TASK_DESCRIPTION,TASK_NAME,TASK_DURATION_HRS,TASK_START,TASK_END,TASK_STATUS,CREATED_TS,PROGRESS   FROM TASKS t 
 		<where>
 			t.PROJECT_ID=#{projectId} ;
 		</where>

@@ -76,6 +76,9 @@ public class Tasks implements Serializable{
 	@Column(name = "PROJECT_ID")
 	private int projectId;
 
+	@Column(name = "PROGRESS")
+	private int progress;
+
 	public int getId() {
 		return id;
 	}
@@ -178,6 +181,14 @@ public class Tasks implements Serializable{
 
 	public void setProjectId(int projectId) {
 		this.projectId = projectId;
+	}
+	
+	public int getProgress() {
+		return progress;
+	}
+
+	public void setProgress(int progress) {
+		this.progress = progress;
 	}
 	
 }
