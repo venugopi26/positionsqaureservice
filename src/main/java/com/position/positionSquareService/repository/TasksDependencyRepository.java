@@ -11,7 +11,7 @@ import com.position.positionSquareService.model.TaskDependency;
 @Repository
 public interface TasksDependencyRepository extends JpaRepository<TaskDependency, Long> {
 
-	@Query("select t from TaskDependency t where t.taskCurrentId = ?1")
+	@Query("select t from TaskDependency t where t.taskDependentid = ?1")
 	Set<TaskDependency> getDependentTaskTaskByProject(int taskCurrentID);
 
 	@Query("select t from TaskDependency t where t.taskCurrentId = ?1 and t.taskDependentid = ?2")

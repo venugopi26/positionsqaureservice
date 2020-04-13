@@ -1,11 +1,13 @@
 package com.position.positionSquareService.utils;
 
+import java.util.Date;
 import java.util.Set;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.position.positionSquareService.model.TaskDependency;
 import com.position.positionSquareService.model.Tasks;
 import com.position.positionSquareService.repository.TasksRepository;
 
@@ -34,6 +36,18 @@ public class TaskValidation {
 			oldTask.setTaskStatus("COMPLETED");
 		}
 		return oldTask;
+	}
+
+	public void validateTaskDetails(@Valid TaskDependency dt) {
+		Tasks task = tasksRepository.findOne(dt.getTaskDependentid());
+		Tasks currentTask = tasksRepository.findOne(dt.getTaskCurrentId());
+		if(task.getTaskEnd().getTime() > currentTask.getTaskStart().getTime()) {
+			long diffTime = task.getTaskEnd().getTime() - currentTask.getTaskStart().getTime() +86400000;
+			
+			currentTask.setTaskStart(new Date(currentTask.getTaskStart().getTime() + diffTime));
+			currentTask.setTaskEnd(new Date(currentTask.getTaskEnd().getTime() + diffTime));
+			tasksRepository.save(currentTask);
+		}
 	}
 
 }

@@ -9,6 +9,8 @@ import java.util.Set;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,8 @@ import com.position.positionSquareService.utils.TaskValidation;
  */
 @Service
 public class ClientService {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClientService.class);
 
 	@Autowired
 	ProjectRepository projectRepository;
@@ -55,7 +59,7 @@ public class ClientService {
 				response.setErrorResponse("Already exists");
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			LOGGER.error(e.getMessage());
 			e.printStackTrace();
 			response.setErrorResponse("Error in creating project !! please try again ");
 		}
@@ -77,7 +81,7 @@ public class ClientService {
 				response.setErrorResponse("Already exists");
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			LOGGER.error(e.getMessage());
 			e.printStackTrace();
 			response.setErrorResponse("Error in creating Task !! please try again ");
 		}
@@ -87,31 +91,42 @@ public class ClientService {
 	@Transactional
 	public ResponseEntity<Tasks> updateTask(@Valid Tasks task, @Valid int taskId, int clientId, @Valid int projectId) {
 		ResponseEntity<Tasks> response= new ResponseEntity<Tasks>();
+		response.setStatusCode(500);
 		try {
 			Tasks oldTask = tasksRepository.findOne(taskId);
-			long startNo = task.getTaskStart().getTime() - oldTask.getTaskStart().getTime();
-			long endNo = task.getTaskEnd().getTime() - oldTask.getTaskEnd().getTime();
-			// intial update for tasks 
-			// check if progress is chaneged if chanegs then validate wheather the if linking is thr check if the taks has been completed 
-			Tasks tk = taskValidation.validateTaskForUpdate(oldTask, task);
-			tasksRepository.save(tk);
-			
-			Set<TaskDependency> tasks = tasksDependencyRepository.getDependentTaskTaskByProject(taskId);
-			if(tasks !=null) {
-				tasks.forEach((taskDepend) -> {
-					Tasks dependentTask = tasksRepository.findOne(taskDepend.getTaskDependentid());
-					dependentTask.setTaskStart(new Date(dependentTask.getTaskStart().getTime() + startNo));
-					dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + endNo));
-					tasksRepository.save(dependentTask);
-				});	
+			if(oldTask.getProgress()!=100) {
+				long startNo = task.getTaskStart().getTime() - oldTask.getTaskStart().getTime();
+				long endNo = task.getTaskEnd().getTime() - oldTask.getTaskEnd().getTime();
+				// intial update for tasks 
+				// check if progress is chaneged if chanegs then validate wheather the if linking is thr check if the taks has been completed 
+				Tasks tk = taskValidation.validateTaskForUpdate(oldTask, task);
+				tasksRepository.save(tk);
+				
+				Set<TaskDependency> tasks = tasksDependencyRepository.getDependentTaskTaskByProject(taskId);
+				LOGGER.info("get task dependencies" + tasks.toString());
+				if(tasks !=null) {
+					tasks.forEach((taskDepend) -> {
+						LOGGER.info("getlist task dependencies" +  taskDepend.toString());
+						Tasks dependentTask = tasksRepository.findOne(taskDepend.getTaskCurrentId());
+						LOGGER.info("find one " +  dependentTask.toString());
+						LOGGER.info("startNo " + startNo);
+						LOGGER.info("endNo " + endNo);
+						dependentTask.setTaskStart(new Date(dependentTask.getTaskStart().getTime() + endNo));
+						dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + endNo));
+						tasksRepository.save(dependentTask);
+						LOGGER.info("dependentTask " + dependentTask.toString());
+					});	
+				}
+				response = new ResponseEntity<>();
+				response.setStatusCode(200);
+				response.setResponse(tk);
+			}else {
+				response.setErrorResponse("Task Completed cannot update!!");
 			}
-			response = new ResponseEntity<>();
-			response.setStatusCode(200);
-			response.setResponse(tk);
+			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			LOGGER.error(e.getMessage());
 			e.printStackTrace();
-			response.setStatusCode(500);
 			response.setErrorResponse(e.getMessage());
 		}
 		return response;
@@ -126,13 +141,15 @@ public class ClientService {
 					dt.getTaskDependentid());
 			if (null == taskDependency) {
 				tasksDependencyRepository.save(dt);
+				// check validations 
+				taskValidation.validateTaskDetails(dt);
 				response.setResponse(dt);
 				response.setStatusCode(200);
 			} else {
 				response.setErrorResponse("Already exists");
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			LOGGER.error(e.getMessage());
 			e.printStackTrace();
 			response.setErrorResponse("Error in creating Task !! please try again ");
 		}

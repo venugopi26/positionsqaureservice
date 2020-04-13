@@ -154,6 +154,14 @@ public class Project implements Serializable{
 		this.updatedTs = updatedTs;
 	}
 
+	@Override
+	public String toString() {
+		return "Project [id=" + id + ", clientId=" + clientId + ", name=" + name + ", description=" + description
+				+ ", state=" + state + ", estimatedStart=" + estimatedStart + ", estimatedEnd=" + estimatedEnd
+				+ ", createdBy=" + createdBy + ", createdTs=" + createdTs + ", updatedBy=" + updatedBy + ", updatedTs="
+				+ updatedTs + "]";
+	}
+
 	
 
 

@@ -190,5 +190,15 @@ public class Tasks implements Serializable{
 	public void setProgress(int progress) {
 		this.progress = progress;
 	}
+
+	@Override
+	public String toString() {
+		return "Tasks [id=" + id + ", taskName=" + taskName + ", taskDescription=" + taskDescription + ", duration="
+				+ duration + ", taskStatus=" + taskStatus + ", taskStart=" + taskStart + ", taskEnd=" + taskEnd
+				+ ", isDeleted=" + isDeleted + ", createdBy=" + createdBy + ", createdTs=" + createdTs + ", updatedBy="
+				+ updatedBy + ", updatedTs=" + updatedTs + ", projectId=" + projectId + ", progress=" + progress + "]";
+	}
+	
+	
 	
 }

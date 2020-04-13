@@ -103,4 +103,12 @@ public class Role implements Serializable{
 		this.updatedTs = updatedTs;
 	}
 
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", roleId=" + roleId + ", userId=" + userId + ", createdBy=" + createdBy
+				+ ", createdTs=" + createdTs + ", updatedBy=" + updatedBy + ", updatedTs=" + updatedTs + "]";
+	}
+	
+	
+
 }

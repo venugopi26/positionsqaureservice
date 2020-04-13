@@ -117,6 +117,13 @@ public class TaskDependency implements Serializable{
 	public void setUpdatedTs(Date updatedTs) {
 		this.updatedTs = updatedTs;
 	}
+
+	@Override
+	public String toString() {
+		return "TaskDependency [id=" + id + ", taskCurrentId=" + taskCurrentId + ", taskDependentid=" + taskDependentid
+				+ ", taskProirity=" + taskProirity + ", createdBy=" + createdBy + ", createdTs=" + createdTs
+				+ ", updatedBy=" + updatedBy + ", updatedTs=" + updatedTs + "]";
+	}
 	
 	
 	
