@@ -5,6 +5,7 @@ package com.position.positionSquareService.controller;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.validation.Valid;
 
@@ -23,6 +24,7 @@ import com.position.positionSquareService.model.Project;
 import com.position.positionSquareService.model.TaskDependency;
 import com.position.positionSquareService.model.Tasks;
 import com.position.positionSquareService.model.User;
+import com.position.positionSquareService.repository.TasksRepository;
 import com.position.positionSquareService.service.ClientService;
 import com.position.positionSquareService.service.UserService;
 
@@ -86,7 +88,7 @@ public class ClientController {
 	}
 
 	@PostMapping("/addTaskDependencies")
-	public ResponseEntity<Tasks> updateTaskDependencies(@RequestHeader(value = "clientId") int clientId,
+	public ResponseEntity<TaskDependency> addTaskDependencies(@RequestHeader(value = "clientId") int clientId,
 			@RequestBody TaskDependency dt) {
 		return clientService.addTaskDependencies(clientId, dt);
 	}

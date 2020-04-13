@@ -19,6 +19,7 @@ import com.position.positionSquareService.model.Tasks;
 import com.position.positionSquareService.repository.ProjectRepository;
 import com.position.positionSquareService.repository.TasksDependencyRepository;
 import com.position.positionSquareService.repository.TasksRepository;
+import com.position.positionSquareService.utils.TaskValidation;
 
 /**
  * @author anush
@@ -35,10 +36,13 @@ public class ClientService {
 
 	@Autowired
 	TasksDependencyRepository tasksDependencyRepository;
+	
+	@Autowired
+	TaskValidation taskValidation;
 
 	@Transactional
 	public ResponseEntity<Project> addProject(@Valid Project project, int clientId) {
-		ResponseEntity<Project> response = new ResponseEntity<>();
+		ResponseEntity<Project> response = new ResponseEntity<Project>();
 		response.setStatusCode(500);
 		try {
 			Project pro = projectRepository.getprojectByName(project.getName(), clientId);
@@ -60,7 +64,7 @@ public class ClientService {
 
 	@Transactional
 	public ResponseEntity<Tasks> addTask(@Valid Tasks task, @Valid int projectId, int clientId) {
-		ResponseEntity<Tasks> response = new ResponseEntity<>();
+		ResponseEntity<Tasks> response = new ResponseEntity<Tasks>();
 		response.setStatusCode(500);
 		try {
 			Tasks tasks = tasksRepository.getTaskByProject(task.getTaskName(), projectId, clientId);
@@ -84,42 +88,45 @@ public class ClientService {
 	public ResponseEntity<Tasks> updateTask(@Valid Tasks task, @Valid int taskId, int clientId, @Valid int projectId) {
 		ResponseEntity<Tasks> response= new ResponseEntity<Tasks>();
 		try {
-			Tasks oldTask = tasksRepository.getOne(taskId);
+			Tasks oldTask = tasksRepository.findOne(taskId);
 			long startNo = task.getTaskStart().getTime() - oldTask.getTaskStart().getTime();
-			long endNo = task.getTaskEnd().getTime() - oldTask.getTaskStart().getTime();
+			long endNo = task.getTaskEnd().getTime() - oldTask.getTaskEnd().getTime();
 			// intial update for tasks 
-			task.setProjectId(projectId);
-			tasksRepository.save(task);
+			// check if progress is chaneged if chanegs then validate wheather the if linking is thr check if the taks has been completed 
+			Tasks tk = taskValidation.validateTaskForUpdate(oldTask, task);
+			tasksRepository.save(tk);
 			
 			Set<TaskDependency> tasks = tasksDependencyRepository.getDependentTaskTaskByProject(taskId);
-			tasks.forEach((taskDepend) -> {
-				Tasks dependentTask = tasksRepository.getOne(taskDepend.getTaskDependentid());
-				dependentTask.setTaskStart(new Date(dependentTask.getTaskStart().getTime() + startNo));
-				dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + endNo));
-				tasksRepository.save(dependentTask);
-			});
-
+			if(tasks !=null) {
+				tasks.forEach((taskDepend) -> {
+					Tasks dependentTask = tasksRepository.findOne(taskDepend.getTaskDependentid());
+					dependentTask.setTaskStart(new Date(dependentTask.getTaskStart().getTime() + startNo));
+					dependentTask.setTaskEnd(new Date(dependentTask.getTaskEnd().getTime() + endNo));
+					tasksRepository.save(dependentTask);
+				});	
+			}
 			response = new ResponseEntity<>();
 			response.setStatusCode(200);
-			response.setResponse(task);
+			response.setResponse(tk);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			response.setStatusCode(500);
-			response.setErrorResponse("Error in updating tasks");
+			response.setErrorResponse(e.getMessage());
 		}
 		return response;
 	}
 
 	@Transactional
-	public ResponseEntity<Tasks> addTaskDependencies(int clientId, @Valid TaskDependency dt) {
-		ResponseEntity<Tasks> response = new ResponseEntity<>();
+	public ResponseEntity<TaskDependency> addTaskDependencies(int clientId, @Valid TaskDependency dt) {
+		ResponseEntity<TaskDependency> response = new ResponseEntity<TaskDependency>();
 		response.setStatusCode(500);
 		try {
 			TaskDependency taskDependency = tasksDependencyRepository.addTaskDependency(dt.getTaskCurrentId(),
 					dt.getTaskDependentid());
 			if (null == taskDependency) {
 				tasksDependencyRepository.save(dt);
+				response.setResponse(dt);
 				response.setStatusCode(200);
 			} else {
 				response.setErrorResponse("Already exists");
@@ -131,5 +138,4 @@ public class ClientService {
 		}
 		return response;
 	}
-
 }

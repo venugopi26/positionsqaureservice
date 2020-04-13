@@ -50,8 +50,9 @@
 		CREATED_TS
 		FROM PROJECT p
 		<where>
-			p.CLIENT_ID=#{clientId} ;
+			p.CLIENT_ID=#{clientId} 
 		</where>
+		ORDER BY CREATED_TS;
 	</select>
 
 	<select id="getTasks" resultMap="taskMap">
