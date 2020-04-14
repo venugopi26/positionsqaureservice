@@ -14,4 +14,5 @@ public interface ClientMapper {
 	List<Map<Object, Object>> getTasks(int clientId ,int projectId ,int userId);
 
 	List<Map<Object, Object>> addDependentTasks(int clientId, TaskDependency dt);
+	
 }

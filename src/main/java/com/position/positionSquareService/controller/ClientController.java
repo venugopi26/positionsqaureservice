@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.position.positionSquareService.dto.ResponseEntity;
@@ -59,13 +60,13 @@ public class ClientController {
 
 	@PostMapping("/addTask")
 	public ResponseEntity<Tasks> addTask(@RequestHeader(value = "clientId") int clientId,
-			@Valid @RequestHeader(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
+			@Valid @RequestParam(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
 		return clientService.addTask(task, projectId, clientId);
 	}
 
 	@PutMapping("/updateTask")
 	public ResponseEntity<Tasks> updateTask(@RequestHeader(value = "clientId") int clientId,
-			@Valid @RequestHeader(value = "taskId") int taskId,@Valid @RequestHeader(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
+			@Valid @RequestParam(value = "taskId") int taskId,@Valid @RequestParam(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
 		return clientService.updateTask(task, taskId, clientId,projectId);
 	}
 
@@ -80,7 +81,7 @@ public class ClientController {
 
 	@GetMapping("/tasks")
 	public ResponseEntity<List<Map<Object, Object>>> getTasks(@RequestHeader(value = "clientId") int clientId,
-			@RequestHeader(value = "projectId") int projectId, @RequestHeader(value = "userId") int userId) {
+			@RequestParam(value = "projectId") int projectId, @RequestHeader(value = "userId") int userId) {
 		ResponseEntity<List<Map<Object, Object>>> response = new ResponseEntity<List<Map<Object, Object>>>();
 		response.setResponse(clientMapper.getTasks(clientId, projectId, userId));
 		response.setStatusCode(200);
@@ -92,5 +93,5 @@ public class ClientController {
 			@RequestBody TaskDependency dt) {
 		return clientService.addTaskDependencies(clientId, dt);
 	}
-
+	
 }
