@@ -31,6 +31,12 @@
 		 <collection property="dependencies"  ofType="java.lang.Integer"  javaType="list">
 			<result column="DEPENDENT_ID" javaType="java.lang.Integer" />
 		</collection>
+		 <collection property="projectDependency"  resultMap="view" javaType="list" />
+	</resultMap>
+	<resultMap type="map" id="view"> 
+	<result property="projectName" column="ID" />
+			<result property="projectName" column="NAME" />
+			<result property="taskName" column="LINKED_TASK_NAME" />
 	</resultMap>
 	
 	<select id="getTasksDependency" resultType="int">
@@ -56,10 +62,12 @@
 	</select>
 
 	<select id="getTasks" resultMap="taskMap">
-		SELECT t.ID as TASK_ID,TASK_DESCRIPTION,TASK_NAME,TASK_DURATION_HRS,TASK_START,TASK_END,TASK_STATUS,t.CREATED_TS,PROGRESS,
-		td.TASK_DEPENDENT_ID as DEPENDENT_ID  
+		SELECT t.ID as TASK_ID,t.TASK_DESCRIPTION,t.TASK_NAME,t.TASK_DURATION_HRS,t.TASK_START,t.TASK_END,t.TASK_STATUS,t.CREATED_TS,t.PROGRESS,
+		td.TASK_DEPENDENT_ID as DEPENDENT_ID, tt.TASK_NAME  AS LINKED_TASK_NAME , tt.ID as ID ,p.NAME as NAME 
 		FROM TASKS t 
 		LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID 
+		LEFT JOIN TASKS tt ON tt.ID = td.TASK_DEPENDENT_ID 
+		LEFT JOIN PROJECT p ON tt.PROJECT_ID = p.ID 
 		<where>
 			t.PROJECT_ID=#{projectId} 
 		</where>

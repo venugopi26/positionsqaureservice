@@ -109,3 +109,453 @@
 2020-04-14 10:31:58,948 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 11.898 seconds (JVM running for 13.518)
 2020-04-14 10:31:59,187 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2020-04-14 10:31:59,209 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-04-14 12:17:08,705 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 25318 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:17:08,721 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:17:10,516 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-04-14 12:17:10,516 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 12:17:10,588 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 12:17:10,676 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:17:11,169 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:17:11,791 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:17:11,797 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:17:11,798 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:17:11,938 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:17:13,650 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:17:13,651 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:17:13,652 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:17:13,653 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:17:13,789 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:17:13,877 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:17:13,936 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:17:14,037 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:17:14,159 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:17:14,693 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:17:15,247 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:17:15,259 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-04-14 12:17:15,261 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-04-14 12:17:15,277 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientController': Unsatisfied dependency expressed through field 'clientMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientMapper' defined in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/com/position/positionSquareService/mapper/ClientMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.position.positionSquareService.PositionSquareServiceApplication.main(PositionSquareServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientMapper' defined in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/com/position/positionSquareService/mapper/ClientMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 30 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 43 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74$$FastClassBySpringCGLIB$$790ad17f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 44 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 57 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.processNestedResultMappings(XMLMapperBuilder.java:401)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.lambda$buildResultMappingFromContext$0(XMLMapperBuilder.java:382)
+	at org.apache.ibatis.parsing.XNode.getStringAttribute(XNode.java:227)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:381)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:279)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 59 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 68 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 70 common frames omitted
+2020-04-14 12:17:34,351 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 25569 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:17:34,353 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:17:35,369 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-04-14 12:17:35,370 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 12:17:35,437 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 12:17:35,509 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:17:35,751 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:17:36,304 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:17:36,310 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:17:36,312 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:17:36,401 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:17:37,607 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:17:37,608 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:17:37,609 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:17:37,609 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:17:37,832 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:17:37,916 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:17:37,966 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:17:38,076 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:17:38,165 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:17:38,735 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:17:39,616 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:17:39,859 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:17:39,872 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:17:39,893 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:17:40,055 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:17:40,118 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.055 seconds (JVM running for 6.696)
+2020-04-14 12:17:53,401 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 12:18:01,713 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8888-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.UnsupportedOperationException
+### The error may exist in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]
+### The error may involve com.position.positionSquareService.mapper.ClientMapper.getTasks
+### The error occurred while handling results
+### SQL: SELECT t.ID as TASK_ID,t.TASK_DESCRIPTION,t.TASK_NAME,t.TASK_DURATION_HRS,t.TASK_START,t.TASK_END,t.TASK_STATUS,t.CREATED_TS,t.PROGRESS,   td.TASK_DEPENDENT_ID as DEPENDENT_ID, tt.TASK_NAME  AS LINKED_TASK_NAME , tt.ID as ID ,p.NAME as NAME    FROM TASKS t    LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID    LEFT JOIN TASKS tt ON tt.ID = td.TASK_DEPENDENT_ID    LEFT JOIN PROJECT p ON tt.PROJECT_ID = p.ID     WHERE t.PROJECT_ID=?    ORDER BY CREATED_TS;
+### Cause: java.lang.UnsupportedOperationException] with root cause
+java.lang.UnsupportedOperationException: null
+	at org.apache.ibatis.reflection.wrapper.CollectionWrapper.set(CollectionWrapper.java:43)
+	at org.apache.ibatis.reflection.MetaObject.setValue(MetaObject.java:140)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:455)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:905)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyNestedResultMappings(DefaultResultSetHandler.java:952)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:907)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:870)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:326)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy129.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy130.getTasks(Unknown Source)
+	at com.position.positionSquareService.controller.ClientController.getTasks(ClientController.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-14 12:19:45,437 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:19:45,450 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-04-14 12:19:47,995 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26095 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:19:47,999 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:19:49,069 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-04-14 12:19:49,070 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 12:19:49,145 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 12:19:49,224 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:19:49,474 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:19:50,030 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:19:50,037 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:19:50,039 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:19:50,117 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:19:51,346 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:19:51,348 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:19:51,350 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:19:51,350 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:19:51,476 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:19:51,538 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:19:51,584 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:19:51,687 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:19:51,768 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:19:52,327 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:19:53,127 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:19:53,343 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:19:53,356 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:19:53,376 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:19:53,512 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:19:53,552 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 5.892 seconds (JVM running for 6.512)
+2020-04-14 12:20:00,265 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 12:20:00,415 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8888-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.UnsupportedOperationException
+### The error may exist in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]
+### The error may involve com.position.positionSquareService.mapper.ClientMapper.getTasks
+### The error occurred while handling results
+### SQL: SELECT t.ID as TASK_ID,t.TASK_DESCRIPTION,t.TASK_NAME,t.TASK_DURATION_HRS,t.TASK_START,t.TASK_END,t.TASK_STATUS,t.CREATED_TS,t.PROGRESS,   td.TASK_DEPENDENT_ID as DEPENDENT_ID, tt.TASK_NAME  AS LINKED_TASK_NAME , tt.ID as ID ,p.NAME as NAME    FROM TASKS t    LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID    LEFT JOIN TASKS tt ON tt.ID = td.TASK_DEPENDENT_ID    LEFT JOIN PROJECT p ON tt.PROJECT_ID = p.ID     WHERE t.PROJECT_ID=?    ORDER BY CREATED_TS;
+### Cause: java.lang.UnsupportedOperationException] with root cause
+java.lang.UnsupportedOperationException: null
+	at org.apache.ibatis.reflection.wrapper.CollectionWrapper.set(CollectionWrapper.java:43)
+	at org.apache.ibatis.reflection.MetaObject.setValue(MetaObject.java:140)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:455)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:905)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyNestedResultMappings(DefaultResultSetHandler.java:952)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:907)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:870)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:326)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy129.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy130.getTasks(Unknown Source)
+	at com.position.positionSquareService.controller.ClientController.getTasks(ClientController.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-04-14 12:20:43,408 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:20:43,422 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-04-14 12:20:45,381 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26281 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:20:45,383 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:20:46,687 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-04-14 12:20:46,688 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 12:20:46,906 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 12:20:46,983 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:20:47,279 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:20:47,860 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:20:47,865 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:20:47,867 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:20:48,025 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:20:49,788 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:20:49,791 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:20:49,793 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:20:49,794 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:20:49,936 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:20:50,032 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:20:50,110 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:20:50,216 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:20:50,295 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:20:50,922 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:20:51,996 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:20:52,276 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:20:52,290 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:20:52,316 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:20:52,479 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:20:52,521 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.449 seconds (JVM running for 8.001)
+2020-04-14 12:20:54,804 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 12:25:52,407 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:25:52,420 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-04-14 12:25:54,537 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26766 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:25:54,539 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:25:55,589 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-04-14 12:25:55,590 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 12:25:55,719 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 12:25:55,799 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:25:56,052 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:25:56,591 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:25:56,596 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:25:56,600 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:25:56,726 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:25:58,022 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:25:58,024 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:25:58,027 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:25:58,027 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:25:58,152 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:25:58,261 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:25:58,324 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:25:58,467 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:25:58,564 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:25:59,152 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:25:59,913 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:26:00,140 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:26:00,150 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:26:00,169 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:26:00,304 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:26:00,345 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.106 seconds (JVM running for 6.676)
+2020-04-14 12:26:05,226 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 12:26:20,125 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:26:20,138 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-04-14 12:26:58,181 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26978 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:26:58,182 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:26:59,575 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:26:59,950 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:27:00,779 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:27:00,789 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:27:00,793 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:27:00,912 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:27:02,433 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:27:02,435 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:27:02,440 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:27:02,440 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:27:02,552 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:27:02,676 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:27:02,744 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:27:02,866 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:27:02,965 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:27:03,667 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:27:05,062 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:27:05,669 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:27:05,690 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:27:05,721 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:27:05,931 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:27:05,969 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.268 seconds (JVM running for 9.33)
+2020-04-14 12:27:06,154 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:27:06,169 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
