@@ -60,13 +60,13 @@ public class ClientController {
 
 	@PostMapping("/addTask")
 	public ResponseEntity<Tasks> addTask(@RequestHeader(value = "clientId") int clientId,
-			@Valid @RequestParam(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
+			@Valid @RequestHeader(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
 		return clientService.addTask(task, projectId, clientId);
 	}
 
 	@PutMapping("/updateTask")
 	public ResponseEntity<Tasks> updateTask(@RequestHeader(value = "clientId") int clientId,
-			@Valid @RequestParam(value = "taskId") int taskId,@Valid @RequestParam(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
+			@Valid @RequestHeader(value = "taskId") int taskId,@Valid @RequestHeader(value = "projectId") int projectId, @Valid @RequestBody Tasks task) {
 		return clientService.updateTask(task, taskId, clientId,projectId);
 	}
 
@@ -81,7 +81,7 @@ public class ClientController {
 
 	@GetMapping("/tasks")
 	public ResponseEntity<List<Map<Object, Object>>> getTasks(@RequestHeader(value = "clientId") int clientId,
-			@RequestParam(value = "projectId") int projectId, @RequestHeader(value = "userId") int userId) {
+			@RequestHeader(value = "projectId") int projectId, @RequestHeader(value = "userId") int userId) {
 		ResponseEntity<List<Map<Object, Object>>> response = new ResponseEntity<List<Map<Object, Object>>>();
 		response.setResponse(clientMapper.getTasks(clientId, projectId, userId));
 		response.setStatusCode(200);
