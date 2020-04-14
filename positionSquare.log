@@ -559,3 +559,29 @@ java.lang.UnsupportedOperationException: null
 2020-04-14 12:27:05,969 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.268 seconds (JVM running for 9.33)
 2020-04-14 12:27:06,154 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2020-04-14 12:27:06,169 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-04-14 12:29:36,859 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 27396 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
+2020-04-14 12:29:36,861 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-04-14 12:29:38,536 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 12:29:38,942 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 12:29:39,768 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:29:39,778 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
+2020-04-14 12:29:39,781 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
+2020-04-14 12:29:39,875 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-04-14 12:29:41,333 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-04-14 12:29:41,335 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:29:41,336 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
+2020-04-14 12:29:41,337 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-04-14 12:29:41,493 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-04-14 12:29:41,689 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 12:29:41,775 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 12:29:41,908 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 12:29:42,039 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-04-14 12:29:42,806 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 12:29:44,111 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-14 12:29:44,642 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-04-14 12:29:44,659 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-04-14 12:29:44,684 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:29:44,879 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-04-14 12:29:44,911 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.492 seconds (JVM running for 9.41)
+2020-04-14 12:29:45,069 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-04-14 12:29:45,080 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

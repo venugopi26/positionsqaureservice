@@ -34,7 +34,7 @@
 		 <collection property="projectDependency"  resultMap="view" javaType="list" />
 	</resultMap>
 	<resultMap type="map" id="view"> 
-	<result property="projectName" column="ID" />
+	<result property="projectId" column="ID" />
 			<result property="projectName" column="NAME" />
 			<result property="taskName" column="LINKED_TASK_NAME" />
 	</resultMap>
