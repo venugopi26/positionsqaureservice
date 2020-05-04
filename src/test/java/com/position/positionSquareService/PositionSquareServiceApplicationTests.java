@@ -16,7 +16,7 @@ import com.position.positionSquareService.service.ClickService;
 
 
 @SpringBootTest
-//@ActiveProfiles("test")
+@ActiveProfiles("test")
 @RunWith(SpringRunner.class)
 public class PositionSquareServiceApplicationTests {
 
@@ -47,6 +47,5 @@ public class PositionSquareServiceApplicationTests {
 		gc.setKeywordId("K1");
 		gc.setCampaignId("Ca1");
 		return gc;
-	}
-	
+	}	
 }

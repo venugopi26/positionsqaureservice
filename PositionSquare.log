@@ -653,3 +653,255 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'te
 	... 67 common frames omitted
 2020-05-04 17:46:44,494 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2020-05-04 17:46:44,536 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 19:35:41,940 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 10423 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 19:35:41,941 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 19:35:43,666 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 19:35:44,320 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 19:35:44,573 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 19:35:45,469 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:35:45,484 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 19:35:45,491 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:35:45,496 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:35:45,498 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 19:35:45,501 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 19:35:45,513 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 19:35:47,306 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 19:35:47,308 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 19:35:47,310 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 19:35:47,310 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 19:35:47,311 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 19:35:47,312 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:35:47,329 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 19:35:47,330 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 19:35:47,330 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 2ms
+2020-05-04 19:35:47,331 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 19:35:47,337 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8601147312')
+2020-05-04 19:35:47,350 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 19:35:47,560 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 19:35:47,623 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 19:35:47,743 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 19:35:47,879 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 19:35:48,439 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 19:35:49,378 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 19:35:50,137 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 19:35:50,156 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 19:35:50,179 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 19:35:50,311 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 9.342 seconds (JVM running for 10.924)
+2020-05-04 19:35:50,671 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 19:35:50,690 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 19:37:18,040 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 10480 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 19:37:18,042 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 19:37:19,468 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 19:37:20,182 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 19:37:20,461 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 19:37:21,492 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:37:21,508 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 19:37:21,516 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:37:21,521 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:37:21,523 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 19:37:21,527 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 19:37:21,538 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 19:37:23,378 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 19:37:23,380 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 19:37:23,382 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 19:37:23,383 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 19:37:23,383 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 19:37:23,385 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 19:37:23,402 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 19:37:23,403 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 19:37:23,403 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 2ms
+2020-05-04 19:37:23,404 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 19:37:23,409 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8601243385')
+2020-05-04 19:37:23,422 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 19:37:23,626 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 19:37:23,706 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 19:37:23,854 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 19:37:23,993 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 19:37:24,689 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 19:37:25,662 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 19:37:26,392 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 19:37:26,410 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 19:37:26,440 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 19:37:26,588 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 9.544 seconds (JVM running for 10.818)
+2020-05-04 19:37:26,924 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 19:37:26,936 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 20:25:33,427 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 12082 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 20:25:33,429 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 20:25:35,289 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 20:25:36,057 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 20:25:36,463 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 20:25:38,011 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:25:38,032 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 20:25:38,041 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:25:38,046 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:25:38,048 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 20:25:38,053 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 20:25:38,066 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 20:25:40,274 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 20:25:40,276 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 20:25:40,278 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:25:40,279 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 20:25:40,280 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 20:25:40,281 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:25:40,293 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 20:25:40,294 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 20:25:40,295 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 3ms
+2020-05-04 20:25:40,296 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:25:40,305 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8604140282')
+2020-05-04 20:25:40,321 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 20:25:40,522 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 20:25:40,623 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 20:25:40,809 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 20:25:40,982 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 20:25:41,853 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 20:25:43,181 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 20:25:44,099 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 20:25:44,127 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 20:25:44,162 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 20:25:44,390 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 12.07 seconds (JVM running for 14.389)
+2020-05-04 20:27:59,095 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 20:27:59,102 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 20:28:32,047 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 12256 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 20:28:32,051 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 20:28:34,308 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 20:28:35,083 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 20:28:35,486 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 20:28:37,013 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:28:37,036 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 20:28:37,049 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:28:37,054 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:28:37,056 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 20:28:37,061 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 20:28:37,076 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 20:28:39,346 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 20:28:39,349 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 20:28:39,350 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:28:39,351 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 20:28:39,352 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 20:28:39,354 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:28:39,366 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 20:28:39,368 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 20:28:39,368 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 3ms
+2020-05-04 20:28:39,369 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:28:39,377 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8604319354')
+2020-05-04 20:28:39,393 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 20:28:39,583 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 20:28:39,716 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 20:28:39,948 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 20:28:40,167 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 20:28:41,151 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 20:28:42,461 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 20:28:43,378 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 20:28:43,413 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 20:28:43,452 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 20:28:43,628 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 12.875 seconds (JVM running for 15.288)
+2020-05-04 20:28:51,788 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 20:28:51,799 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 20:32:02,395 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 12371 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 20:32:02,396 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 20:32:03,957 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 20:32:04,546 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 20:32:04,753 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 20:32:05,800 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:32:05,816 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 20:32:05,823 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:32:05,827 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:32:05,829 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 20:32:05,833 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 20:32:05,844 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 20:32:07,565 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 20:32:07,567 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 20:32:07,568 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:32:07,569 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 20:32:07,570 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 20:32:07,571 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:32:07,589 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 20:32:07,591 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 20:32:07,591 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 3ms
+2020-05-04 20:32:07,592 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:32:07,598 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8604527571')
+2020-05-04 20:32:07,611 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 20:32:07,800 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 20:32:07,889 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 20:32:08,060 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 20:32:08,191 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 20:32:08,734 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 20:32:09,766 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 20:32:10,458 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 20:32:10,476 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 20:32:10,501 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 20:32:10,627 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.918 seconds (JVM running for 10.189)
+2020-05-04 20:32:10,961 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 20:32:10,980 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 20:38:12,950 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 12733 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 20:38:12,959 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 20:38:14,494 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 20:38:15,060 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 20:38:15,295 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 20:38:26,420 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:38:26,435 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 20:38:26,441 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:38:26,446 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:38:26,447 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 20:38:26,450 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 20:38:26,460 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 20:38:28,473 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 20:38:28,475 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 20:38:28,476 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:38:28,477 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 20:38:28,478 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 20:38:28,479 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:38:28,496 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 20:38:28,497 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 20:38:28,497 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 2ms
+2020-05-04 20:38:28,498 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:38:28,505 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8604908480')
+2020-05-04 20:38:28,518 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 20:38:28,727 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 20:38:28,860 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 20:38:29,042 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 20:38:29,245 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 20:38:30,047 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 20:38:31,456 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 20:38:32,622 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 20:38:32,649 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 20:38:32,681 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 20:38:32,865 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 20.921 seconds (JVM running for 22.543)
+2020-05-04 20:38:33,269 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 20:38:33,285 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-05-04 20:39:34,054 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on venu-X556UR with PID 12854 (started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 20:39:34,055 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] The following profiles are active: test
+2020-05-04 20:39:35,577 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 20:39:36,186 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 20:39:36,401 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 20:39:47,316 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:39:47,330 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 20:39:47,336 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:39:47,341 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:39:47,343 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2020-05-04 20:39:47,346 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 20:39:47,375 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 20:39:49,106 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-05-04 20:39:49,108 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2020-05-04 20:39:49,110 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:39:49,111 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from PUBLIC.DATABASECHANGELOG
+2020-05-04 20:39:49,112 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 20:39:49,113 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2020-05-04 20:39:49,125 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE PUBLIC.GOOGLE_CLICKS (CLICK_ID VARCHAR(45), KEYWORD_ID VARCHAR(45), CAMPAIGN_ID VARCHAR(45), CREATED_TIME TIMESTAMP DEFAULT NOW())
+2020-05-04 20:39:49,126 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 20:39:49,126 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 3ms
+2020-05-04 20:39:49,127 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2020-05-04 20:39:49,134 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8604989113')
+2020-05-04 20:39:49,147 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 20:39:49,337 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 20:39:49,425 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 20:39:49,590 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 20:39:49,745 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-04 20:39:50,356 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 20:39:51,411 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 20:39:52,294 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 20:39:52,323 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 20:39:52,355 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 20:39:52,507 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 19.222 seconds (JVM running for 20.51)
+2020-05-04 20:39:52,836 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-04 20:39:52,851 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
