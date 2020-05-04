@@ -1,140 +1,98 @@
-2020-04-14 10:21:50,917 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 28893 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 10:21:50,937 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 10:21:53,192 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 10:21:53,192 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 10:21:53,276 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 10:21:53,396 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 10:21:53,856 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 10:21:54,991 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:21:55,006 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:21:55,012 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 10:21:55,131 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 10:21:57,738 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 10:21:57,740 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:21:57,742 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:21:57,742 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 10:21:57,877 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 10:21:58,134 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 10:21:58,239 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 10:21:58,386 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 10:21:58,691 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 10:21:59,496 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 10:22:00,783 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 10:22:01,139 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 10:22:01,155 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 10:22:01,183 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:22:01,394 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:22:01,535 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 11.071 seconds (JVM running for 12.315)
-2020-04-14 10:22:21,520 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-14 10:23:44,745 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 10:23:44,781 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 10:24:35,136 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 29469 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 10:24:35,138 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
-2020-04-14 10:24:37,213 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 10:24:38,645 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 10:24:40,357 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:24:40,380 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:24:40,385 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 10:24:40,514 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 10:24:42,927 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 10:24:42,929 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:24:42,931 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:24:42,932 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 10:24:43,139 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 10:24:43,303 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 10:24:43,397 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 10:24:43,567 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 10:24:43,779 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 10:24:45,084 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 10:24:48,169 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 10:24:49,434 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 10:24:49,462 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 10:24:49,514 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:24:49,894 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:24:49,981 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 15.595 seconds (JVM running for 18.269)
-2020-04-14 10:24:52,865 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
-2020-04-14 10:24:52,934 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
-2020-04-14 10:31:16,278 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 32384 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 10:31:16,283 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 10:31:18,261 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 10:31:18,262 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 10:31:18,366 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 10:31:18,478 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 10:31:18,814 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 10:31:19,579 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:31:19,588 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:31:19,591 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 10:31:19,784 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 10:31:21,697 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 10:31:21,698 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:31:21,700 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:31:21,700 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 10:31:21,859 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 10:31:22,006 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 10:31:22,131 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 10:31:22,265 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 10:31:22,403 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 10:31:23,182 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 10:31:24,693 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 10:31:25,103 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 10:31:25,120 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 10:31:25,154 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:31:25,404 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:31:25,521 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 9.669 seconds (JVM running for 10.793)
-2020-04-14 10:31:27,834 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(4)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 10:31:27,878 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(4)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 10:31:47,635 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 32752 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 10:31:47,637 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
-2020-04-14 10:31:49,762 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 10:31:50,375 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 10:31:51,559 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:31:51,575 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 10:31:51,592 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 10:31:51,705 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 10:31:53,919 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 10:31:53,922 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:31:53,924 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 10:31:53,924 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 10:31:54,122 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 10:31:54,439 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 10:31:54,522 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 10:31:54,701 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 10:31:54,888 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 10:31:55,932 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 10:31:57,754 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 10:31:58,567 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 10:31:58,594 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 10:31:58,631 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:31:58,895 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 10:31:58,948 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 11.898 seconds (JVM running for 13.518)
-2020-04-14 10:31:59,187 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
-2020-04-14 10:31:59,209 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
-2020-04-14 12:17:08,705 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 25318 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:17:08,721 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:17:10,516 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 12:17:10,516 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 12:17:10,588 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 12:17:10,676 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:17:11,169 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:17:11,791 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:17:11,797 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:17:11,798 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:17:11,938 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:17:13,650 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:17:13,651 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:17:13,652 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:17:13,653 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:17:13,789 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:17:13,877 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:17:13,936 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:17:14,037 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:17:14,159 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:17:14,693 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:17:15,247 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:17:15,259 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
-2020-04-14 12:17:15,261 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
-2020-04-14 12:17:15,277 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientController': Unsatisfied dependency expressed through field 'clientMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientMapper' defined in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/com/position/positionSquareService/mapper/ClientMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
+2020-05-04 13:10:33,357 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 18581 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:10:33,401 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:10:35,539 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:10:35,540 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:10:35,611 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:10:35,696 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:10:36,068 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:10:36,807 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:10:36,848 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE POSITION_SQUARE.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-05-04 13:10:37,173 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:10:37,181 INFO liquibase.executor.jvm.JdbcExecutor [main] DELETE FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:10:37,183 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO POSITION_SQUARE.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2020-05-04 13:10:37,229 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:10:37,295 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:10:38,901 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Creating database history table with name: POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:10:38,903 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE POSITION_SQUARE.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2020-05-04 13:10:39,208 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:10:39,210 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:10:39,212 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:10:39,216 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:10:39,243 INFO liquibase.executor.jvm.JdbcExecutor [main] CREATE TABLE POSITION_SQUARE.GOOGLE_CLICKS (CLICK_ID VARCHAR(45) NULL, KEYWORD_ID VARCHAR(45) NULL, CAMPAIGN_ID VARCHAR(45) NULL, CREATED_TIME datetime DEFAULT NOW() NULL)
+2020-05-04 13:10:39,621 INFO liquibase.changelog.ChangeSet [main] Table GOOGLE_CLICKS created
+2020-05-04 13:10:39,623 INFO liquibase.changelog.ChangeSet [main] ChangeSet /changelog/changelog-1.1.xml::1.1::Venu ran successfully in 383ms
+2020-05-04 13:10:39,625 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MAX(ORDEREXECUTED) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:10:39,629 INFO liquibase.executor.jvm.JdbcExecutor [main] INSERT INTO POSITION_SQUARE.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1.1', 'Venu', '/changelog/changelog-1.1.xml', NOW(), 1, '8:4664067f13a7fba8f7004aef7edf05db', 'createTable tableName=GOOGLE_CLICKS', '', 'EXECUTED', NULL, NULL, '3.8.8', '8578039218')
+2020-05-04 13:10:39,710 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:10:39,800 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:10:39,845 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:10:39,919 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:10:40,006 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:10:40,122 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:10:40,137 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-05-04 13:10:40,139 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-05-04 13:10:40,157 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.position.positionSquareService.model.GoogleClicks
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.position.positionSquareService.PositionSquareServiceApplication.main(PositionSquareServiceApplication.java:12)
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.position.positionSquareService.model.GoogleClicks
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:266)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:781)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:254)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:230)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:273)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted
+2020-05-04 13:12:37,278 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 18713 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:12:37,281 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:12:38,514 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:12:38,515 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:12:38,580 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:12:38,679 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:12:39,051 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:12:39,811 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:12:39,818 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:12:39,821 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:12:39,889 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:12:41,772 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:12:41,774 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:12:41,775 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:12:41,775 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:12:41,828 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:12:41,907 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:12:41,953 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:12:42,038 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:12:42,111 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:12:42,778 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:12:43,202 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:12:43,215 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-05-04 13:12:43,217 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-05-04 13:12:43,241 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'keyGen.key' in value "${keyGen.key}"
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -155,9 +113,9 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
 	at com.position.positionSquareService.PositionSquareServiceApplication.main(PositionSquareServiceApplication.java:12)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientMapper' defined in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/com/position/positionSquareService/mapper/ClientMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'keyGen.key' in value "${keyGen.key}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
@@ -169,419 +127,653 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
 	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'keyGen.key' in value "${keyGen.key}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:909)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 30 common frames omitted
+2020-05-04 13:14:05,880 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 18826 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:14:05,883 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:14:07,512 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:14:07,513 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:14:07,598 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:14:07,697 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:14:08,063 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:14:08,854 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:14:08,861 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:14:08,863 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:14:08,998 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:14:10,986 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:14:10,987 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:14:10,988 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:14:10,989 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:14:11,041 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:14:11,102 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:14:11,146 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:14:11,252 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:14:11,324 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:14:11,994 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:14:13,077 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:14:13,323 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:14:13,336 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:14:13,364 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:14:13,573 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:14:13,630 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 8.205 seconds (JVM running for 8.931)
+2020-05-04 13:14:56,459 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:14:56,474 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:17:08,428 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 19005 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:17:08,431 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:17:09,317 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:17:09,796 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:17:09,797 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:17:09,867 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:17:09,973 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:17:10,281 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:17:11,061 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:17:11,067 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:17:11,070 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:17:11,130 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:17:12,676 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:17:12,677 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:17:12,678 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:17:12,679 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:17:12,746 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:17:12,819 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:17:12,858 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:17:12,946 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:17:13,022 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:17:13,604 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:17:14,217 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:17:14,757 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:17:14,770 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:17:14,798 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:17:14,810 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:17:14,837 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.876 seconds (JVM running for 7.796)
+2020-05-04 13:17:30,684 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:19:27,586 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:19:27,603 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:19:29,686 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 19247 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:19:29,689 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:19:30,647 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:19:31,174 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:19:31,174 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:19:31,248 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:19:31,360 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:19:31,729 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:19:32,393 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:19:32,398 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:19:32,400 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:19:32,452 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:19:34,326 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:19:34,327 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:19:34,328 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:19:34,328 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:19:34,473 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:19:34,605 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:19:34,650 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:19:34,725 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:19:34,797 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:19:35,440 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:19:35,940 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:19:36,336 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:19:36,346 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:19:36,367 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:19:36,376 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:19:36,398 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.083 seconds (JVM running for 7.781)
+2020-05-04 13:19:49,619 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:19:49,640 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:19:51,936 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 19332 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:19:51,941 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:19:52,784 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:19:53,166 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:19:53,166 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:19:53,220 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:19:53,303 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:19:53,592 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:19:54,252 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:19:54,257 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:19:54,259 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:19:54,326 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:19:56,275 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:19:56,277 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:19:56,278 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:19:56,279 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:19:56,325 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:19:56,390 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:19:56,433 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:19:56,517 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:19:56,593 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:19:57,239 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:19:57,870 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:19:58,371 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:19:58,386 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:19:58,415 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:19:58,427 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:19:58,456 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.993 seconds (JVM running for 7.728)
+2020-05-04 13:20:13,841 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:20:41,289 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:20:41,311 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:21:11,130 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 20788 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:21:11,135 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:21:11,952 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:21:12,331 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:21:12,331 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:21:12,398 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:21:12,484 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:21:12,747 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:21:13,361 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:21:13,368 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:21:13,370 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:21:13,437 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:21:15,400 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:21:15,402 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:21:15,403 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:21:15,403 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:21:15,446 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:21:15,577 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:21:15,629 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:21:15,733 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:21:15,807 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:21:16,453 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:21:17,103 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:21:17,513 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:21:17,527 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:21:17,551 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:21:17,561 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:21:17,581 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.934 seconds (JVM running for 7.661)
+2020-05-04 13:21:31,097 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:21:31,123 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:21:33,058 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 20877 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:21:33,061 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:21:33,912 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:21:34,275 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:21:34,276 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:21:34,329 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:21:34,409 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:21:34,673 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:21:35,349 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:21:35,355 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:21:35,357 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:21:35,412 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:21:37,109 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:21:37,111 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:21:37,111 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:21:37,112 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:21:37,155 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:21:37,254 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:21:37,294 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:21:37,402 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:21:37,481 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:21:38,068 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:21:38,586 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:21:38,894 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:21:38,905 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:21:38,925 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:21:38,935 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:21:38,955 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.242 seconds (JVM running for 6.853)
+2020-05-04 13:21:44,253 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:22:51,769 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:22:51,788 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:22:54,009 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 21003 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:22:54,016 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:22:54,846 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:22:55,271 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:22:55,272 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:22:55,337 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:22:55,431 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:22:55,756 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:22:56,435 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:22:56,440 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:22:56,442 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:22:56,515 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:22:58,205 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:22:58,207 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:22:58,208 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:22:58,208 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:22:58,258 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:22:58,349 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:22:58,391 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:22:58,467 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:22:58,538 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:22:59,111 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:22:59,598 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:22:59,922 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:22:59,933 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:22:59,955 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:22:59,965 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:22:59,984 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.349 seconds (JVM running for 7.077)
+2020-05-04 13:23:11,018 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:23:37,987 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:23:37,999 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:25:59,390 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 21326 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:25:59,394 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:26:00,394 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:26:00,804 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:26:00,804 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:26:00,857 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:26:00,937 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:26:01,220 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:26:01,827 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:26:01,832 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:26:01,834 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:26:01,898 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:26:03,858 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:26:03,861 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:26:03,862 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:26:03,864 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:26:03,974 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:26:04,133 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:26:04,185 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:26:04,309 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:26:04,418 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:26:05,182 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:26:05,678 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:26:06,000 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:26:06,014 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:26:06,035 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:26:06,044 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:26:06,068 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.147 seconds (JVM running for 7.901)
+2020-05-04 13:26:09,306 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:27:37,194 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:27:37,212 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(13)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:30:12,700 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 21483 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:30:12,703 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:30:13,766 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:30:14,114 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:30:14,114 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:30:14,182 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:30:14,259 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:30:14,550 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:30:15,357 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:30:15,362 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:30:15,364 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:30:15,443 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:30:17,240 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:30:17,241 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:30:17,242 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:30:17,243 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:30:17,308 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:30:17,420 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:30:17,466 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:30:17,538 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:30:17,612 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:30:18,188 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:30:18,679 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:30:18,996 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:30:19,007 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
+2020-05-04 13:30:19,030 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:30:19,124 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:30:19,145 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.853 seconds (JVM running for 7.458)
+2020-05-04 13:30:25,668 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:35:02,971 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(16)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:35:02,990 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(16)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:35:05,137 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 21679 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:35:05,140 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:35:05,930 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:35:06,306 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:35:06,306 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:35:06,363 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:35:06,446 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:35:06,738 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:35:07,340 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:35:07,345 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:35:07,347 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:35:07,408 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:35:09,229 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:35:09,232 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:35:09,233 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:35:09,233 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:35:09,273 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:35:09,360 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:35:09,402 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:35:09,485 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:35:09,561 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:35:09,931 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:35:10,378 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:35:10,658 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:35:10,674 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 13:35:10,699 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:35:10,810 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.046 seconds (JVM running for 6.753)
+2020-05-04 13:36:01,141 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:36:01,155 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(12)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:36:03,404 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 21787 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:36:03,406 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
+2020-05-04 13:36:04,261 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:36:04,636 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:36:04,636 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:36:04,690 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:36:04,774 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:36:05,100 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:36:09,947 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:36:09,953 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:36:09,955 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:36:10,011 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:36:12,183 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:36:12,184 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:36:12,185 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:36:12,186 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:36:12,250 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:36:12,398 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:36:12,469 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:36:12,602 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:36:12,700 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:36:13,216 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:36:13,899 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:36:14,338 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:36:14,356 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 13:36:14,397 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:36:14,556 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 11.488 seconds (JVM running for 12.175)
+2020-05-04 13:36:46,334 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:39:24,857 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:39:24,875 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:46:46,876 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 22126 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:46:46,879 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 13:46:47,761 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:46:48,208 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:46:48,208 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:46:48,273 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:46:48,365 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:46:48,649 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:46:49,576 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:46:49,583 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:46:49,586 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:46:49,640 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:46:51,378 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:46:51,380 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:46:51,381 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:46:51,381 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:46:51,479 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:46:51,582 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:46:51,630 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:46:51,705 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:46:51,775 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:46:52,133 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:46:52,595 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:46:52,877 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:46:52,889 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 13:46:52,910 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:46:53,071 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.543 seconds (JVM running for 7.177)
+2020-05-04 13:57:18,797 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(23)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:57:18,857 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(23)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:57:30,044 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 22922 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:57:30,046 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 13:57:31,019 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:57:31,675 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:57:31,676 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:57:31,746 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:57:31,859 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:57:32,340 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:57:32,980 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:57:32,985 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:57:32,987 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:57:33,044 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:57:35,383 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:57:35,384 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:57:35,385 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:57:35,385 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:57:35,436 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:57:35,513 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:57:35,572 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:57:35,679 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:57:35,776 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:57:36,284 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:57:36,921 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:57:37,226 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:57:37,238 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 13:57:37,261 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:57:37,423 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 8.01 seconds (JVM running for 9.032)
+2020-05-04 13:57:46,877 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 13:58:20,915 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:58:20,935 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 13:58:23,625 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23100 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:58:23,627 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 13:58:24,786 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:58:25,369 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:58:25,370 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:58:25,470 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:58:25,619 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:58:26,063 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:58:26,894 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:58:26,901 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:58:26,903 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:58:26,962 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:58:28,974 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:58:28,976 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:58:28,977 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:58:28,977 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:58:29,049 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:58:29,197 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:58:29,258 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:58:29,363 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:58:29,476 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:58:29,986 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:58:30,281 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-05-04 13:58:30,298 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-05-04 13:58:30,301 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-05-04 13:58:30,332 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commandController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env' in value "${env}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.position.positionSquareService.PositionSquareServiceApplication.main(PositionSquareServiceApplication.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'env' in value "${env}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:909)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1231)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
-	... 30 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
-	... 43 common frames omitted
-Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
-	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
-	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74.CGLIB$sqlSessionFactory$2(<generated>)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74$$FastClassBySpringCGLIB$$790ad17f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b349ec74.sqlSessionFactory(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 44 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
-	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
-	... 57 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.processNestedResultMappings(XMLMapperBuilder.java:401)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.lambda$buildResultMappingFromContext$0(XMLMapperBuilder.java:382)
-	at org.apache.ibatis.parsing.XNode.getStringAttribute(XNode.java:227)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:381)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:279)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
-	... 59 common frames omitted
-Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'java.lang.list'.  Cause: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
-	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
-	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
-	... 68 common frames omitted
-Caused by: java.lang.ClassNotFoundException: Cannot find class: java.lang.list
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
-	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
-	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
-	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
-	... 70 common frames omitted
-2020-04-14 12:17:34,351 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 25569 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:17:34,353 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:17:35,369 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 12:17:35,370 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 12:17:35,437 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 12:17:35,509 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:17:35,751 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:17:36,304 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:17:36,310 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:17:36,312 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:17:36,401 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:17:37,607 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:17:37,608 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:17:37,609 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:17:37,609 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:17:37,832 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:17:37,916 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:17:37,966 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:17:38,076 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:17:38,165 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:17:38,735 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:17:39,616 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:17:39,859 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:17:39,872 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:17:39,893 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:17:40,055 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:17:40,118 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.055 seconds (JVM running for 6.696)
-2020-04-14 12:17:53,401 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-14 12:18:01,713 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8888-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: java.lang.UnsupportedOperationException
-### The error may exist in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]
-### The error may involve com.position.positionSquareService.mapper.ClientMapper.getTasks
-### The error occurred while handling results
-### SQL: SELECT t.ID as TASK_ID,t.TASK_DESCRIPTION,t.TASK_NAME,t.TASK_DURATION_HRS,t.TASK_START,t.TASK_END,t.TASK_STATUS,t.CREATED_TS,t.PROGRESS,   td.TASK_DEPENDENT_ID as DEPENDENT_ID, tt.TASK_NAME  AS LINKED_TASK_NAME , tt.ID as ID ,p.NAME as NAME    FROM TASKS t    LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID    LEFT JOIN TASKS tt ON tt.ID = td.TASK_DEPENDENT_ID    LEFT JOIN PROJECT p ON tt.PROJECT_ID = p.ID     WHERE t.PROJECT_ID=?    ORDER BY CREATED_TS;
-### Cause: java.lang.UnsupportedOperationException] with root cause
-java.lang.UnsupportedOperationException: null
-	at org.apache.ibatis.reflection.wrapper.CollectionWrapper.set(CollectionWrapper.java:43)
-	at org.apache.ibatis.reflection.MetaObject.setValue(MetaObject.java:140)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:455)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:905)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyNestedResultMappings(DefaultResultSetHandler.java:952)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:907)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:870)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:326)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy129.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy130.getTasks(Unknown Source)
-	at com.position.positionSquareService.controller.ClientController.getTasks(ClientController.java:86)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-04-14 12:19:45,437 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:19:45,450 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 12:19:47,995 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26095 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:19:47,999 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:19:49,069 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 12:19:49,070 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 12:19:49,145 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 12:19:49,224 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:19:49,474 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:19:50,030 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:19:50,037 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:19:50,039 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:19:50,117 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:19:51,346 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:19:51,348 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:19:51,350 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:19:51,350 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:19:51,476 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:19:51,538 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:19:51,584 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:19:51,687 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:19:51,768 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:19:52,327 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:19:53,127 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:19:53,343 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:19:53,356 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:19:53,376 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:19:53,512 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:19:53,552 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 5.892 seconds (JVM running for 6.512)
-2020-04-14 12:20:00,265 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-14 12:20:00,415 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8888-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: java.lang.UnsupportedOperationException
-### The error may exist in file [/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes/mybatis/mapper/clientMapper.xml]
-### The error may involve com.position.positionSquareService.mapper.ClientMapper.getTasks
-### The error occurred while handling results
-### SQL: SELECT t.ID as TASK_ID,t.TASK_DESCRIPTION,t.TASK_NAME,t.TASK_DURATION_HRS,t.TASK_START,t.TASK_END,t.TASK_STATUS,t.CREATED_TS,t.PROGRESS,   td.TASK_DEPENDENT_ID as DEPENDENT_ID, tt.TASK_NAME  AS LINKED_TASK_NAME , tt.ID as ID ,p.NAME as NAME    FROM TASKS t    LEFT JOIN TASK_DEPENDENCY td ON t.ID = td.TASK_CURRENT_ID    LEFT JOIN TASKS tt ON tt.ID = td.TASK_DEPENDENT_ID    LEFT JOIN PROJECT p ON tt.PROJECT_ID = p.ID     WHERE t.PROJECT_ID=?    ORDER BY CREATED_TS;
-### Cause: java.lang.UnsupportedOperationException] with root cause
-java.lang.UnsupportedOperationException: null
-	at org.apache.ibatis.reflection.wrapper.CollectionWrapper.set(CollectionWrapper.java:43)
-	at org.apache.ibatis.reflection.MetaObject.setValue(MetaObject.java:140)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:455)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:905)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyNestedResultMappings(DefaultResultSetHandler.java:952)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:907)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:870)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:326)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301)
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy129.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy130.getTasks(Unknown Source)
-	at com.position.positionSquareService.controller.ClientController.getTasks(ClientController.java:86)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-04-14 12:20:43,408 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:20:43,422 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 12:20:45,381 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26281 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:20:45,383 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:20:46,687 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 12:20:46,688 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 12:20:46,906 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 12:20:46,983 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:20:47,279 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:20:47,860 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:20:47,865 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:20:47,867 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:20:48,025 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:20:49,788 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:20:49,791 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:20:49,793 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:20:49,794 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:20:49,936 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:20:50,032 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:20:50,110 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:20:50,216 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:20:50,295 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:20:50,922 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:20:51,996 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:20:52,276 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:20:52,290 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:20:52,316 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:20:52,479 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:20:52,521 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.449 seconds (JVM running for 8.001)
-2020-04-14 12:20:54,804 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-14 12:25:52,407 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:25:52,420 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 12:25:54,537 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26766 (/home/anush/Downloads/PositionSquare/PositionSquareService/target/classes started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:25:54,539 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:25:55,589 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2020-04-14 12:25:55,590 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-14 12:25:55,719 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2020-04-14 12:25:55,799 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:25:56,052 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:25:56,591 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:25:56,596 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:25:56,600 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:25:56,726 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:25:58,022 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:25:58,024 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:25:58,027 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:25:58,027 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:25:58,152 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:25:58,261 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:25:58,324 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:25:58,467 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:25:58,564 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:25:59,152 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:25:59,913 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:26:00,140 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:26:00,150 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:26:00,169 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:26:00,304 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:26:00,345 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.106 seconds (JVM running for 6.676)
-2020-04-14 12:26:05,226 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-14 12:26:20,125 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:26:20,138 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown completed.
-2020-04-14 12:26:58,181 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 26978 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:26:58,182 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:26:59,575 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:26:59,950 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:27:00,779 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:27:00,789 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:27:00,793 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:27:00,912 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:27:02,433 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:27:02,435 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:27:02,440 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:27:02,440 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:27:02,552 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:27:02,676 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:27:02,744 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:27:02,866 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:27:02,965 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:27:03,667 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:27:05,062 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:27:05,669 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:27:05,690 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:27:05,721 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:27:05,931 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:27:05,969 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.268 seconds (JVM running for 9.33)
-2020-04-14 12:27:06,154 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:27:06,169 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
-2020-04-14 12:29:36,859 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Starting PositionSquareServiceApplicationTests on anush-HP-Pavilion-Laptop-15-cc1xx with PID 27396 (started by anush in /home/anush/Downloads/PositionSquare/PositionSquareService)
-2020-04-14 12:29:36,861 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] No active profile set, falling back to default profiles: default
-2020-04-14 12:29:38,536 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-04-14 12:29:38,942 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-04-14 12:29:39,768 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:29:39,778 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK
-2020-04-14 12:29:39,781 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSTION_SQUARE_DB.DATABASECHANGELOGLOCK WHERE ID=1
-2020-04-14 12:29:39,875 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
-2020-04-14 12:29:41,333 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSTION_SQUARE_DB.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
-2020-04-14 12:29:41,335 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:29:41,336 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSTION_SQUARE_DB.DATABASECHANGELOG
-2020-04-14 12:29:41,337 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSTION_SQUARE_DB.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2020-04-14 12:29:41,493 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
-2020-04-14 12:29:41,689 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-14 12:29:41,775 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-14 12:29:41,908 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-14 12:29:42,039 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-04-14 12:29:42,806 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-14 12:29:44,111 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-04-14 12:29:44,642 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-04-14 12:29:44,659 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 2 custom documentation plugin(s)
-2020-04-14 12:29:44,684 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:29:44,879 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-04-14 12:29:44,911 INFO com.position.positionSquareService.PositionSquareServiceApplicationTests [main] Started PositionSquareServiceApplicationTests in 8.492 seconds (JVM running for 9.41)
-2020-04-14 12:29:45,069 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
-2020-04-14 12:29:45,080 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2020-05-04 13:59:10,226 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23249 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 13:59:10,229 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 13:59:11,363 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 13:59:11,789 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 13:59:11,790 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 13:59:11,869 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 13:59:11,972 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 13:59:12,471 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 13:59:13,335 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:59:13,341 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 13:59:13,344 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 13:59:13,404 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 13:59:15,483 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 13:59:15,485 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:59:15,486 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 13:59:15,487 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 13:59:15,545 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 13:59:15,644 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 13:59:15,709 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 13:59:15,818 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 13:59:15,931 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 13:59:16,471 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 13:59:17,268 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 13:59:17,730 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 13:59:17,746 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 13:59:17,779 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 13:59:17,955 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 8.589 seconds (JVM running for 10.493)
+2020-05-04 13:59:40,733 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 14:03:11,060 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 14:03:11,068 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 14:03:13,480 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23639 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 14:03:13,483 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 14:03:14,359 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 14:03:14,798 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 14:03:14,798 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 14:03:14,865 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 14:03:14,974 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 14:03:15,330 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 14:03:16,008 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:03:16,014 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:03:16,016 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 14:03:16,067 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 14:03:17,938 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 14:03:17,939 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:03:17,940 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:03:17,941 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 14:03:18,010 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 14:03:18,115 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 14:03:18,159 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 14:03:18,247 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 14:03:18,326 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 14:03:18,794 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 14:03:19,403 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 14:03:19,715 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 14:03:19,727 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 14:03:19,748 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 14:03:19,897 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.781 seconds (JVM running for 7.47)
+2020-05-04 14:03:37,062 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 14:04:14,506 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 14:04:14,517 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(11)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 14:04:16,724 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23749 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 14:04:16,726 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 14:04:17,588 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 14:04:18,047 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 14:04:18,048 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 14:04:18,116 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 14:04:18,214 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 14:04:18,501 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 14:04:33,517 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23817 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 14:04:33,522 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: qe
+2020-05-04 14:04:34,837 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 14:04:35,303 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 14:04:35,304 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 14:04:35,369 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 14:04:35,461 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 14:04:35,729 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 14:04:36,445 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:04:36,451 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:04:36,453 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 14:04:36,526 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 14:04:38,368 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 14:04:38,370 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:04:38,370 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:04:38,371 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 14:04:38,436 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 14:04:38,545 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 14:04:38,591 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 14:04:38,696 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 14:04:38,769 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 14:04:39,127 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 14:04:39,576 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 14:04:39,853 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 14:04:39,865 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 14:04:39,885 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 14:04:39,997 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.453 seconds (JVM running for 8.333)
+2020-05-04 14:04:49,783 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 14:04:57,192 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 14:04:57,204 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-04 14:06:26,800 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 23997 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 14:06:26,803 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: qe
+2020-05-04 14:06:27,772 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 14:06:28,253 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 14:06:28,253 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 14:06:28,341 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 14:06:28,445 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 14:06:28,750 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 14:06:29,442 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:06:29,447 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:06:29,449 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 14:06:29,513 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 14:06:31,892 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 14:06:31,894 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:06:31,895 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:06:31,895 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 14:06:31,995 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 14:06:32,123 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 14:06:32,182 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 14:06:32,297 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 14:06:32,436 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 14:06:33,001 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 14:06:33,261 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-05-04 14:06:33,277 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-05-04 14:06:33,280 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-05-04 14:06:33,300 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commandController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env' in value "${env}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.position.positionSquareService.PositionSquareServiceApplication.main(PositionSquareServiceApplication.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'env' in value "${env}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:909)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2020-05-04 14:07:08,856 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 24076 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-04 14:07:08,858 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-04 14:07:09,681 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-04 14:07:10,056 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-04 14:07:10,057 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-04 14:07:10,110 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-04 14:07:10,192 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-04 14:07:10,481 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-04 14:07:11,096 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:07:11,101 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-04 14:07:11,103 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-04 14:07:11,163 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-04 14:07:12,872 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-04 14:07:12,874 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:07:12,875 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-04 14:07:12,875 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-04 14:07:12,923 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-04 14:07:13,036 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-04 14:07:13,108 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-04 14:07:13,220 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-04 14:07:13,291 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-04 14:07:13,647 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-04 14:07:14,100 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-04 14:07:14,378 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-04 14:07:14,389 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-04 14:07:14,409 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-04 14:07:14,520 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 6.075 seconds (JVM running for 6.759)
+2020-05-04 14:08:05,361 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8181-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-04 14:13:03,719 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-04 14:13:03,736 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.

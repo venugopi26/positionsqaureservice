@@ -6,7 +6,7 @@ package com.position.positionSquareService.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * @author anush
+ * @author venu
  *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
