@@ -17,4 +17,24 @@
 				defaultValueComputed="CURRENT_TIMESTAMP" />			
 		</createTable>
 	</changeSet>
+	
+	<changeSet id="1.2" author="Venu">
+		 <addColumn tableName="GOOGLE_CLICKS">
+	        <column name="id" type="BIGINT" autoIncrement="true">
+	            <constraints primaryKey="true" nullable="false"/>
+	        </column>
+    	</addColumn>	 	
+		 <addAutoIncrement tableName="GOOGLE_CLICKS"
+				            columnDataType="int"
+				            columnName="ID"
+				            defaultOnNull="false"
+				            generationType="ALWAYS"
+				            incrementBy="1"
+				            startWith="1"/>
+				            
+		<renameColumn tableName="GOOGLE_CLICKS"     
+			columnDataType="varchar(45)"      
+            newColumnName="GCL_ID"
+            oldColumnName="CLICK_ID"/>			            
+	</changeSet>
 </databaseChangeLog>

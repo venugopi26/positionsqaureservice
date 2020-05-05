@@ -3,6 +3,8 @@ package com.position.positionSquareService.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,21 +18,34 @@ import javax.persistence.Table;
 public class GoogleClicks {
 	
 	@Id
-	@Column(name = "CLICK_ID")
-	private String clickId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
+	private int Id;
+	
+	@Column(name = "GCL_ID")
+	private String gclId;
 	
 	@Column(name = "KEYWORD_ID")
 	private String keywordId;
 	
 	@Column(name = "CAMPAIGN_ID")
-	private String campaignId;				
+	private String campaignId;					
 
-	public String getClickId() {
-		return clickId;
+	
+	public int getId() {
+		return Id;
 	}
 
-	public void setClickId(String clickId) {
-		this.clickId = clickId;
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getGclId() {
+		return gclId;
+	}
+
+	public void setGclId(String gclId) {
+		this.gclId = gclId;
 	}
 
 	public String getKeywordId() {
@@ -51,7 +66,7 @@ public class GoogleClicks {
 
 	@Override
 	public String toString() {
-		return "GoogleClicks [clickId=" + clickId + ", keywordId=" + keywordId + ", campaignId=" + campaignId + "]";
-	}
-	
+		return "GoogleClicks [Id=" + Id + ", gclId=" + gclId + ", keywordId=" + keywordId + ", campaignId=" + campaignId
+				+ "]";
+	}			
 }
