@@ -198,3 +198,33 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'ID' in 'GOOGLE_CLIC
 2020-05-05 18:14:14,840 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8181-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-05 18:14:20,916 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown initiated...
 2020-05-05 18:14:20,949 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-05-05 18:17:43,882 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Starting PositionSquareServiceApplication on venu-X556UR with PID 22239 (/home/venu/Documents/Position2/positionsqaureservice/target/classes started by venu in /home/venu/Documents/Position2/positionsqaureservice)
+2020-05-05 18:17:43,885 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] The following profiles are active: dev
+2020-05-05 18:17:45,059 WARN org.mybatis.spring.mapper.ClassPathMapperScanner [main] No MyBatis mapper was found in '[com.position.positionSquareService]' package. Please check your configuration.
+2020-05-05 18:17:45,541 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-05-05 18:17:45,542 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-05 18:17:45,609 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-05 18:17:45,709 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-05 18:17:46,004 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-05 18:17:46,917 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-05 18:17:46,957 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOGLOCK
+2020-05-05 18:17:46,959 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT `LOCKED` FROM POSITION_SQUARE.DATABASECHANGELOGLOCK WHERE ID=1
+2020-05-05 18:17:47,085 INFO liquibase.lockservice.StandardLockService [main] Successfully acquired change log lock
+2020-05-05 18:17:48,802 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT MD5SUM FROM POSITION_SQUARE.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-05-05 18:17:48,803 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT COUNT(*) FROM POSITION_SQUARE.DATABASECHANGELOG
+2020-05-05 18:17:48,804 INFO liquibase.changelog.StandardChangeLogHistoryService [main] Reading from POSITION_SQUARE.DATABASECHANGELOG
+2020-05-05 18:17:48,805 INFO liquibase.executor.jvm.JdbcExecutor [main] SELECT * FROM POSITION_SQUARE.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-05-05 18:17:48,851 INFO liquibase.lockservice.StandardLockService [main] Successfully released change log lock
+2020-05-05 18:17:48,948 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-05 18:17:48,988 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-05 18:17:49,089 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-05 18:17:49,157 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-05-05 18:17:49,579 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-05 18:17:50,279 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-05 18:17:50,708 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-05-05 18:17:50,724 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-05-05 18:17:50,748 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-05-05 18:17:50,920 INFO com.position.positionSquareService.PositionSquareServiceApplication [main] Started PositionSquareServiceApplication in 7.521 seconds (JVM running for 8.258)
+2020-05-05 18:17:53,842 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8181-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-05 18:17:56,966 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-05-05 18:17:56,989 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown completed.
