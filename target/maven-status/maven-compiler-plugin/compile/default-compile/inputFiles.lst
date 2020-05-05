@@ -5,4 +5,5 @@
 /home/venu/Documents/Position2/positionsqaureservice/src/main/java/com/position/positionSquareService/repository/ClickRepository.java
 /home/venu/Documents/Position2/positionsqaureservice/src/main/java/com/position/positionSquareService/controller/CommandController.java
 /home/venu/Documents/Position2/positionsqaureservice/src/main/java/com/position/positionSquareService/service/ClickService.java
+/home/venu/Documents/Position2/positionsqaureservice/src/main/java/com/position/positionSquareService/dto/ResponseStatus.java
 /home/venu/Documents/Position2/positionsqaureservice/src/main/java/com/position/positionSquareService/configuration/BeanConfig.java

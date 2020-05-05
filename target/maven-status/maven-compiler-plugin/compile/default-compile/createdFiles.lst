@@ -1,4 +1,5 @@
 com/position/positionSquareService/service/ClickService.class
+com/position/positionSquareService/dto/ResponseStatus.class
 com/position/positionSquareService/repository/ClickRepository.class
 com/position/positionSquareService/PositionSquareServiceApplication.class
 com/position/positionSquareService/configuration/SwaggerConfiguration.class
