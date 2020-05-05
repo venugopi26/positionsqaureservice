@@ -3,6 +3,7 @@ package com.position.positionSquareService.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +21,8 @@ public class CommandController {
 	
 	@Autowired
 	ClickService clickService;
+	
+	@Autowired private Environment env;
 		
 	/**
 	 * 
@@ -34,6 +37,8 @@ public class CommandController {
 	@GetMapping("/health")
 	public ResponseStatus addTaskDependencies() {
 		ResponseStatus rs = new ResponseStatus();
+		String port = env.getProperty("server.port");
+		rs.setResponse(port);
 		return rs;		
 	}
 }
